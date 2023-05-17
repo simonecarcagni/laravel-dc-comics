@@ -21,10 +21,22 @@
                 <tr>
                     <th scope="row">{{ $comic->id }}</th>
                     <td>{{ $comic->title }}</td>
-                    <td>{{ $comic->series }}</< /td>
+                    <td>{{ $comic->series }}</td>
                     <td>
                         <a type="button" class="btn btn-dark"
                             href="{{ route('comics.show', ['comic' => $comic->id]) }}">Vista</a>
+                    </td>
+                    <td>
+                        <a type="button" class="btn btn-warning"
+                            href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Modifica</a>
+                    </td>
+                    <td>
+                        <form method="POST" action="{{ route('comics.destroy', ['comic' => $comic->id]) }}">
+                            @csrf
+                            @method('DELETE')
+
+                            <button type="submit" class="btn btn-danger">Cancella</button>
+                        </form>
                     </td>
                 </tr>
             @endforeach

@@ -5,11 +5,11 @@
 @endsection
 
 @section('content')
-    <form method="POST" action={{ route('comics.store') }}>
+    <form method="POST" action="{{ route('comics.store') }}">
         @csrf
         <div class="mb-3">
-            <label for="src" class="form-label">Scegli Url Immagine:</label>
-            <input type="text" class="form-control" id="src" name="src">
+            <label for="thum" class="form-label">Scegli Url Immagine:</label>
+            <input type="text" class="form-control" id="thumb" name="thumb">
         </div>
         <div class="mb-3">
             <label for="title" class="form-label">Titolo:</label>
@@ -20,8 +20,8 @@
             <input type="text" class="form-control" id="price" name="price">
         </div>
         <div class="mb-3">
-            <label for="sale" class="form-label">Data Uscita:</label>
-            <input type="text" class="form-control" id="sale" name="sale">
+            <label for="sale_date" class="form-label">Data Uscita:</label>
+            <input type="text" class="form-control" id="sale_date" name="sale_date">
         </div>
         <div class="mb-3">
             <label for="series" class="form-label">Serie:</label>

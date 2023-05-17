@@ -2,13 +2,9 @@
 
 
 @section('page-title')
-
-Dc Comics
-    
+    Dc Comics
 @endsection
 
 @section('content')
-
-<h1>ciao</h1>
-    
+    <h1>Main</h1>
 @endsection
