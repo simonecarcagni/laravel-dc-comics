@@ -39,12 +39,12 @@ class ComicController extends Controller
     {
 
         $request->validate([
-            'title' => 'required|max=50',
-            'description' => 'required|max=255',
-            'thumb' => 'required|max=255',
-            'price' => 'required|max=50',
-            'series' => 'required|max=50',
-            'sale_date' => 'required',
+            'title' => 'required|max:50',
+            'description' => 'required|max:255',
+            'thumb' => 'required|max:255|url',
+            'price' => 'required|max:50',
+            'series' => 'required|max:50',
+            'sale_date' => 'required|date',
         ]);
 
         $form_data = $request->all();
@@ -99,12 +99,12 @@ class ComicController extends Controller
     public function update(Request $request, Comic $comic)
     {
         $request->validate([
-            'title' => 'required|max=50',
-            'description' => 'required|max=255',
-            'thumb' => 'required|max=255',
-            'price' => 'required|max=50',
-            'series' => 'required|max=50',
-            'sale_date' => 'required',
+            'title' => 'required|max:50',
+            'description' => 'required|max:255',
+            'thumb' => 'required|max:255|url',
+            'price' => 'required|max:50',
+            'series' => 'required|max:50',
+            'sale_date' => 'required|date',
         ]);
         
         $form_data = $request->all();
